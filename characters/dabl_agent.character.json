@@ -2,7 +2,7 @@
     "name": "dabl_agent",
     "username": "dabl_agent",
     "clients": ["telegram", "farcaster"],
-    "modelProvider": "anthropic",
+    "modelProvider": "openai",
     "adjectives": [
         "efficient",
         "discreet",

@@ -61,7 +61,7 @@ export class RegisterProvider {
                         "Just heard about a cool project called " +
                         project.name +
                         " and I think it's awesome!",
-                    signer_uuid: process.env.FARCASTER_SIGNER_UUID,
+                    signer_uuid: process.env.FARCASTER_NEYNAR_SIGNER_UUID,
                 }),
             };
 

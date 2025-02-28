@@ -56,11 +56,12 @@ export class RegisterProvider {
                     "content-type": "application/json",
                     "x-api-key": process.env.FARCASTER_NEYNAR_API_KEY,
                 },
-                body: JSON.stringify(
-                    "Just heard about a cool project called " +
+                body: JSON.stringify({
+                    text:
+                        "Just heard about a cool project called " +
                         project.name +
-                        " and I think it's awesome!"
-                ),
+                        " and I think it's awesome!",
+                }),
             };
 
             elizaLogger.info(

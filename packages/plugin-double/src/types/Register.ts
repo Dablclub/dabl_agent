@@ -60,7 +60,7 @@ export interface ProjectData {
     adminId?: string;
     communityId: string;
     tokenId: string;
-    status: 'ACTIVE' | 'INACTIVE' | 'PENDING';
+    status: "ACTIVE" | "INACTIVE" | "PENDING";
     metadata?: ProjectMetadata;
     category?: string;
     repositoryUrl?: string;
@@ -71,7 +71,12 @@ export interface RegisterProvider {
     registerProject(project: ProjectData): Promise<boolean>;
 }
 
-export type ProjectStage = 'IDEATION' | 'PROTOTYPE' | 'MVP' | 'GROWTH' | 'FUNDED';
+export type ProjectStage =
+    | "IDEATION"
+    | "PROTOTYPE"
+    | "MVP"
+    | "GROWTH"
+    | "FUNDED";
 
 export interface Message {
     content: {

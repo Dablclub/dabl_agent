@@ -1,7 +1,7 @@
 {
     "name": "dabl_agent",
     "username": "dabl_agent",
-    "clients": ["telegram"],
+    "clients": ["telegram", "farcaster"],
     "modelProvider": "anthropic",
     "adjectives": [
         "efficient",

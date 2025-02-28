@@ -68,10 +68,10 @@ export class RegisterProjectAction implements Action {
                         hasName: !!projectData.name,
                         nameLength: projectData.name?.length,
                         hasDescription: !!projectData.description,
-                        hasValidRepo: projectData.repositoryUrl?.startsWith(
-                            "https://github.com/"
-                        ),
-                        stage: projectData.stage,
+                        // hasValidRepo: projectData.repositoryUrl?.startsWith(
+                        //     "https://github.com/"
+                        // ),
+                        // stage: projectData.stage,
                     }
                 );
             } else {
@@ -108,24 +108,24 @@ export class RegisterProjectAction implements Action {
             );
             return false;
         }
-        if (!project.repositoryUrl?.startsWith("https://github.com/")) {
-            elizaLogger.error(
-                "[❌ DOUBLE] RegisterProjectAction - Invalid repository URL:",
-                project.repositoryUrl
-            );
-            return false;
-        }
-        if (
-            !["IDEATION", "PROTOTYPE", "MVP", "GROWTH", "FUNDED"].includes(
-                project.stage
-            )
-        ) {
-            elizaLogger.error(
-                "[❌ DOUBLE] RegisterProjectAction - Invalid project stage:",
-                project.stage
-            );
-            return false;
-        }
+        // if (!project.repositoryUrl?.startsWith("https://github.com/")) {
+        //     elizaLogger.error(
+        //         "[❌ DOUBLE] RegisterProjectAction - Invalid repository URL:",
+        //         project.repositoryUrl
+        //     );
+        //     return false;
+        // }
+        // if (
+        //     !["IDEATION", "PROTOTYPE", "MVP", "GROWTH", "FUNDED"].includes(
+        //         project.stage
+        //     )
+        // ) {
+        //     elizaLogger.error(
+        //         "[❌ DOUBLE] RegisterProjectAction - Invalid project stage:",
+        //         project.stage
+        //     );
+        //     return false;
+        // }
         elizaLogger.info(
             "[✅ DOUBLE] RegisterProjectAction - Project data validation successful"
         );
@@ -140,6 +140,7 @@ export class RegisterProjectAction implements Action {
         callback?: HandlerCallback
     ): Promise<boolean> {
         try {
+            elizaLogger.info("AAAALV ya por favoooor");
             elizaLogger.info(
                 "[🔄 DOUBLE] RegisterProjectAction - Processing registration request"
             );
